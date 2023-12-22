@@ -1,5 +1,5 @@
 {% set name = "scico" %}
-{% set version = "0.0.5" %}
+{% set version = "0.0.5.post1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/scico-{{ version }}.tar.gz
-  sha256: a6c7ac9016a049211a5bfece91b981275abea7ee54a08733f6bb16db2f114d08
+  sha256: a1f808099c1aea223e3cf82a77b946a49cd27fd763dfa14c429bdf0bf0bea536
 
 build:
   noarch: python
@@ -23,13 +23,12 @@ requirements:
     - typing_extensions
     - numpy >=1.20.0
     - scipy >=1.6.0
-    - tifffile
     - imageio >=2.17
     - matplotlib-base
     - jax >=0.4.3,<=0.4.23
     - flax >=0.6.1,<=0.7.5
+    - orbax-checkpoint
     - pyabel >=0.9.0
-    - svmbir >=0.3.3
 
 test:
   imports:
