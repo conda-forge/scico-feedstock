@@ -31,7 +31,7 @@ requirements:
     - flax >=0.8.0,<=0.10.0
     - chex >=0.1.7
     - optax >=0.1.5
-    - orbax-checkpoint >= 0.5.0
+    - orbax-checkpoint >=0.5.0
     - pyabel >=0.9.0
     - xdesign >=0.5.5
     - astra-toolbox
