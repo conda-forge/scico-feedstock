@@ -29,7 +29,7 @@ requirements:
     - matplotlib-base
     - jax >=0.4.13,<=0.4.35
     - flax >=0.8.0,<=0.10.0
-    - optax >=0.20.
+    - optax >=0.2.0
     - orbax-checkpoint >=0.4.4
     - pyabel >=0.9.0
     - xdesign >=0.5.5
