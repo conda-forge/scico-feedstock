@@ -1,5 +1,5 @@
 {% set name = "scico" %}
-{% set version = "0.0.5.post1" %}
+{% set version = "0.0.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/scico-{{ version }}.tar.gz
-  sha256: a1f808099c1aea223e3cf82a77b946a49cd27fd763dfa14c429bdf0bf0bea536
+  sha256: 35f3a1af77f31a9e74fa9846fb67c8c15c04076c3503fa37c36c04d245352ff7
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 0
 
 requirements:
   host:
