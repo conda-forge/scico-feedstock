@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/scico-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/scico-{{ version }}.tar.gz
   sha256: 35f3a1af77f31a9e74fa9846fb67c8c15c04076c3503fa37c36c04d245352ff7
 
 build:
