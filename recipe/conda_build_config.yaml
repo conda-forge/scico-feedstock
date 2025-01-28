@@ -1,0 +1,4 @@
+python_min:
+  # orbax-checkpoint requires >= 3.10
+  - '3.10'
+
