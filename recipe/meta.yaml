@@ -34,7 +34,6 @@ requirements:
     - xdesign >=0.5.5
     - astra-toolbox
     - svmbir >=0.4.0
-    - ray-dashboard >=2.44
     - ray-train >=2.44
     - ray-tune >=2.44
     - hyperopt
