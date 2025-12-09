@@ -22,22 +22,21 @@ requirements:
   run:
     - python >={{ python_min }}
     - typing_extensions
-    - numpy >=1.20.0
-    - scipy >=1.6.0
+    - numpy >=2.0
+    - scipy >=1.13
     - imageio >=2.17
     - tifffile
     - matplotlib-base
-    - jaxlib >=0.4.20,<=0.4.35
-    - jax >=0.4.20,<=0.4.35
+    - jaxlib >=0.5.0,<=0.8.1
+    - jax >=0.5.0,<=0.8.1
     - flax >=0.8.0,<=0.10.0
-    - orbax-checkpoint >=0.5.0
     - pyabel >=0.9.0
     - xdesign >=0.5.5
     - astra-toolbox
-    - svmbir >=0.3.3
-    - ray-dashboard >=2.5.0
-    - ray-train >=2.5.0
-    - ray-tune >=2.5.0
+    - svmbir >=0.4.0
+    - ray-dashboard >=2.44
+    - ray-train >=2.44
+    - ray-tune >=2.44
     - hyperopt
 
 test:
