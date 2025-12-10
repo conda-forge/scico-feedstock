@@ -1,5 +1,5 @@
 {% set name = "scico" %}
-{% set version = "0.0.6" %}
+{% set version = "0.0.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/scico-{{ version }}.tar.gz
-  sha256: 35f3a1af77f31a9e74fa9846fb67c8c15c04076c3503fa37c36c04d245352ff7
+  sha256: 8521802a75b423c4f6e20207ed17c16b1e061c17f3393fb6b140bbbd18287d1d
+  patches:
+    - patches/0001-orbax.checkpoint.patch
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -22,22 +24,20 @@ requirements:
   run:
     - python >={{ python_min }}
     - typing_extensions
-    - numpy >=1.20.0
-    - scipy >=1.6.0
+    - numpy >=2.0
+    - scipy >=1.13
     - imageio >=2.17
     - tifffile
     - matplotlib-base
-    - jaxlib >=0.4.20,<=0.4.35
-    - jax >=0.4.20,<=0.4.35
+    - jaxlib >=0.5.0,<=0.8.1
+    - jax >=0.5.0,<=0.8.1
     - flax >=0.8.0,<=0.10.0
-    - orbax-checkpoint >=0.5.0
     - pyabel >=0.9.0
     - xdesign >=0.5.5
     - astra-toolbox
-    - svmbir >=0.3.3
-    - ray-dashboard >=2.5.0
-    - ray-train >=2.5.0
-    - ray-tune >=2.5.0
+    - svmbir >=0.4.0
+    - ray-train >=2.44
+    - ray-tune >=2.44
     - hyperopt
 
 test:

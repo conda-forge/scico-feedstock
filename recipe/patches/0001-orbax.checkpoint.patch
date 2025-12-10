@@ -1,0 +1,26 @@
+From 5c364ab486c4678e241a4498f313ba853d7d3ff8 Mon Sep 17 00:00:00 2001
+From: Brendt Wohlberg <brendt@ieee.org>
+Date: Tue, 9 Dec 2025 18:48:49 -0700
+Subject: [PATCH] Resolve failure when older version of orbax.checkpoint is
+ installed
+
+---
+ scico/flax/train/checkpoints.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/scico/flax/train/checkpoints.py b/scico/flax/train/checkpoints.py
+index f71d6eb..0c2c3c6 100644
+--- a/scico/flax/train/checkpoints.py
++++ b/scico/flax/train/checkpoints.py
+@@ -15,7 +15,7 @@ try:
+     import orbax.checkpoint as ocp
+ 
+     have_orbax = True
+-    if not hasattr(ocp, "CheckpointManager"):
++    if not hasattr(ocp, "CheckpointManager") or not hasattr(ocp, "checkpoint_managers"):
+         have_orbax = False
+ except ImportError:
+     have_orbax = False
+-- 
+2.43.0
+
