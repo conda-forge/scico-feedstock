@@ -8,6 +8,8 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/scico-{{ version }}.tar.gz
   sha256: 8521802a75b423c4f6e20207ed17c16b1e061c17f3393fb6b140bbbd18287d1d
+  patches:
+    - patches/0001-orbax.checkpoint.patch
 
 build:
   noarch: python
